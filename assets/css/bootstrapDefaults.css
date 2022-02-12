@@ -1,0 +1,63 @@
+/*********************************************************
+                    Bootstrap Defaults
+*********************************************************/
+
+.fw-semiBold {
+  font-weight: 600 !important;
+}
+/* backgrounds */
+.bg-main {
+  background-color: var(--mainBackground) !important;
+}
+.bg-secondary {
+  background-color: var(--secondaryBackground) !important;
+}
+.bg-light {
+  background-color: var(--lightBg) !important;
+}
+.bg-green {
+  background-color: var(--green) !important;
+}
+
+.bg-unique {
+  background-color: var(--uniqueBg);
+}
+
+/* backgrounds */
+
+.postHeader {
+  color: var(--nicheText);
+}
+
+/* font sizes */
+
+.fs-header {
+  font-size: var(--header);
+}
+
+.fs-secondary-header {
+  font-size: var(--secondaryHeader);
+}
+
+.fs-text {
+  font-size: var(--text);
+}
+.fs-ternary-header {
+  font-size: var(--ternaryHeader);
+}
+
+/* viewports */
+@media (max-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 740px;
+  }
+}

@@ -1,0 +1,50 @@
+.faqs {
+  min-height: 95vh;
+}
+
+/* topics */
+
+.topicsHolder {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.topicsHolder label {
+  font-weight: bolder;
+  padding: 1rem 2rem;
+  border-radius: 0 !important;
+  width: 200px;
+}
+
+.btn-check:focus + .btn-outline-success,
+.btn-outline-success:focus {
+  box-shadow: none !important;
+  border-color: var(--green) !important;
+}
+
+/* Accordion */
+.accordion div {
+  background-color: var(--mainBg) !important;
+  color: white !important;
+}
+
+.accordion h1 {
+  color: #fff !important;
+}
+
+.accordion-button {
+  background-color: var(--mainBg) !important;
+  box-shadow: unset !important;
+  color: #fff !important;
+  border: 1px solid white;
+}
+
+.accordion-button:focus {
+  box-shadow: unset !important;
+  border: 1px solid white !important;
+}
+
+.accordion-button::after {
+  display: none;
+}

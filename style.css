@@ -1,0 +1,273 @@
+/*********************************************************
+                        Main
+*********************************************************/
+
+main h1 {
+  font-family: var(--poppins);
+  font-size: var(--header) !important;
+  color: var(--mainText);
+}
+
+main .mainText {
+  margin-top: 5rem !important;
+  position: relative;
+  z-index: 2;
+}
+
+main .mainText p {
+  color: var(--secondaryText);
+  font-size: var(--text);
+}
+
+.searchForm form .row:first-child::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  right: 0%;
+  width: 80%;
+  height: 500px;
+  background-image: url("images/main/mainCity.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  transform: translateY(1.5px);
+  z-index: -1;
+}
+
+main .searchForm {
+  margin-top: 17rem !important;
+}
+
+#searchKeyword:focus {
+  box-shadow: none;
+}
+
+select {
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (max-width: 992px) {
+  main .mainText {
+    margin-top: 4rem !important;
+    text-align: center;
+  }
+
+  main .mainText p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #searchBtn {
+    margin-top: 1rem;
+  }
+
+  main .searchForm {
+    margin-top: 16rem !important;
+  }
+
+  .searchForm form .row:first-child::before {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main .searchForm {
+    margin-top: 12rem !important;
+  }
+
+  .searchForm form .row:first-child::before {
+    width: 100%;
+  }
+}
+
+/*********************************************************
+                        Reviews
+*********************************************************/
+
+.reviews {
+  background-color: var(--reviewsOuterBg);
+}
+
+.reviewCard {
+  border: 2px solid rgba(0, 0, 0, 0.2) !important;
+}
+.reviews .imageWrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.userImage {
+  height: 155px;
+  width: 155px;
+  border-radius: 50%;
+  background: black;
+  margin: 0 auto;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100);
+}
+
+/*********************************************************
+                        subscribe
+*********************************************************/
+
+.subscribe {
+  background-color: var(--uniqueBg);
+  color: white;
+  vertical-align: center;
+}
+
+.subscribe .row {
+  align-items: center;
+}
+
+.subscribe h1 {
+  font-family: var(--poppins);
+  font-size: var(--secondaryHeader);
+}
+.subscribe p {
+  font-size: var(--text);
+}
+
+@media only screen and (max-width: 830px) {
+  .subscribe .row {
+    text-align: center;
+  }
+}
+
+/*********************************************************
+                        Donate
+*********************************************************/
+
+.donate {
+  position: relative;
+  overflow: hidden;
+  font-family: var(--roboto);
+}
+
+.donate span.g {
+  color: var(--green);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.donate::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 90px;
+  bottom: -1px;
+  right: 0px;
+  position: absolute;
+  background-image: url("images/supportUs/weThePeople.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  z-index: 0;
+}
+
+.donate .video {
+  position: relative;
+  z-index: 3;
+}
+
+.textWrapper h1:first-child::before {
+  content: "OUR PURPOSE";
+  display: block;
+  position: absolute;
+  font-size: var(--ternaryHeader);
+  color: var(--green);
+  bottom: calc(100% + 20px);
+  left: 0px;
+  font-weight: bold;
+}
+
+.donate h1 {
+  font-size: var(--secondaryHeader);
+  position: relative;
+  font-family: var(--poppins);
+}
+
+.donate p {
+  font-size: var(--text);
+  color: var(--secondaryBackground);
+  max-width: 500px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .donateBtn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    z-index: 2;
+    position: relative;
+  }
+
+  .donate p {
+    max-width: 900px;
+  }
+
+  .donate::after {
+    background-position: bottom center;
+  }
+}
+
+/*********************************************************
+                    How it Works
+*********************************************************/
+.howItWorks {
+  font-family: var(--roboto);
+}
+
+.howItWorks h1 {
+  position: relative;
+  font-size: calc(var(--secondaryHeader) + 0.2rem);
+  font-family: var(--poppins);
+}
+
+.howItWorks h1:first-child::before {
+  content: "HOW IT WORKS";
+  display: block;
+  position: absolute;
+  font-size: var(--ternaryHeader);
+  color: var(--green);
+  bottom: calc(100% + 20px);
+  left: 0px;
+  font-weight: bold;
+}
+.howItWorks li {
+  font-size: calc(var(--secondaryHeader));
+  font-weight: bolder;
+}
+
+.howItWorks button {
+  max-width: 300px;
+}
+@media only screen and (max-width: 1200px) {
+  .howItWorks .text {
+    order: 2;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .howItWorks .text h1 {
+    text-align: center;
+  }
+
+  .howItWorks h1:first-child::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .howItWorks button {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+  }
+}

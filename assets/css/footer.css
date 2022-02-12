@@ -1,0 +1,16 @@
+/*********************************************************
+                      Footer
+*********************************************************/
+
+footer {
+  background-color: var(--footer);
+}
+
+footer p {
+  text-align: center;
+}
+
+footer .sm:hover {
+  background-color: red;
+  border-radius: 50%;
+}

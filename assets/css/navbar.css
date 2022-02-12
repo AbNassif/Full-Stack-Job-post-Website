@@ -1,0 +1,72 @@
+/*********************************************************
+                        Nav Bar
+*********************************************************/
+header {
+  font-family: var(--roboto);
+}
+
+a.nav-link {
+  position: relative;
+}
+
+a.nav-link:not(.dropdown-toggle):hover,
+#currentPage {
+  transition: 0.5s transform;
+  -webkit-transition: 0.5s transform;
+  transform: translateY(-1px);
+}
+
+a.nav-link:not(.dropdown-toggle)::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+}
+
+a.nav-link:not(.dropdown-toggle):hover::after,
+#currentPage::after {
+  transition: 0.5s width;
+  -webkit-transition: 0.5s width;
+  width: 80%;
+}
+
+a.bookmarks:hover img {
+  transition: 0.5s filter !important;
+  filter: brightness(50);
+}
+
+button.navbar-toggler {
+  font-size: 2rem !important;
+  transition: 0.3s transform;
+}
+
+.rotateHeaven {
+  transform: rotate(180deg);
+}
+
+button.navbar-toggler:focus {
+  box-shadow: unset;
+}
+
+@media only screen and (max-width: 992px) {
+  a.nav-link:not(.dropdown-toggle)::after {
+    display: none;
+  }
+  a.nav-link:not(.dropdown-toggle):hover,
+  #currentPage {
+    transition: none;
+    transform: none;
+  }
+  header a {
+    text-align: center;
+  }
+  header ul {
+    background-color: var(--secondaryBackground);
+    margin-top: 1rem;
+  }
+}

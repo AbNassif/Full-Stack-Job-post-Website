@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Defaults -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs In Lebanon</title>
+
+    <link rel="icon" href="images/tabIcon.png" />
+
+    <!-- Google Fonts(Poppins & Roboto)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- CSS styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/variablesAndDefaultBehaviour.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrapDefaults.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/jobPosts.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <!--****************HEADER****************-->
+    <header class="container">
+      <!--*********NAV BAR*********-->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              style="width: 80px !important"
+              src="images/jobsInLebanonLogo.png"
+              alt="Jobs In Lebanon Logo representing Lebanon"
+            />
+          </a>
+          <button
+            id="navbar-toggler"
+            class="navbar-toggler text-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            &#x2630;
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item m-3">
+                <a id="currentPage" class="nav-link active fw-bold" aria-current="page" href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item m-3">
+                <a class="nav-link" href="./aboutUs.html">About Us</a>
+              </li>
+              <li class="nav-item m-3">
+                <a class="nav-link" href="#">Employers</a>
+              </li>
+              <li class="nav-item m-3">
+                <a class="nav-link" href="#">Candidates</a>
+              </li>
+              <li class="nav-item m-3">
+                <a class="nav-link" href="#">Partners</a>
+              </li>
+              <li class="nav-item m-3">
+                <a class="nav-link" href="./faqs.html">FAQs</a>
+              </li>
+              <li class="nav-item m-3">
+                <a class="nav-link" href="#">Donate</a>
+              </li>
+              <li class="nav-item m-3">
+                <a class="nav-link bookmarks" href="./bookmarks.html"
+                  ><img src="images/main/bookmarks.svg" alt="Bookmarks"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--*********MAIN*********-->
+      <main>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="row mx-auto mainText">
+            <h1 class="display-4 col-lg-8 fw-semiBold lh-sm">
+              Your Dream Job Has Never Been Closer
+            </h1>
+            <p class="lead col-lg-6">
+              Become a part of something bigger and help put a stop to the
+              economical turmoil Lebanon is going through
+            </p>
+          </div>
+        </div>
+
+        <div class="searchForm">
+          <form class="p-3" action="post">
+            <div class="row gx-0 p-3 bg-light rounded position-relative">
+              <div class="col-md-10 col-xl-11 p-0">
+                <input
+                  style="
+                    border-top-right-radius: 0 !important;
+                    border-bottom-right-radius: 0 !important;
+                  "
+                  type="text"
+                  class="form-control p-4 bg-main border-0 text-light"
+                  id="searchKeyword"
+                  name="search"
+                  aria-describedby="Enter Keyword"
+                  placeholder="Enter job title or keyword"
+                />
+              </div>
+
+              <button
+                id="searchBtn"
+                style="
+                  border-top-left-radius: 0 !important;
+                  border-bottom-left-radius: 0 !important;
+                "
+                type="submit"
+                class="col-md-2 p-3 col-xl-1 btn bg-green text-light"
+              >
+                Search
+              </button>
+            </div>
+            <div class="row mt-3">
+              <!-- Option selector -->
+              <div class="selector col-xl-3 col-lg-6 mt-3">
+                <select
+                  class="custom-select w-100 p-2 rounded"
+                  name="level-of-experience"
+                >
+                  <option selected>Level of Experience</option>
+                  <option value="all">All</option>
+                  <option value="entry_level">Entry Level</option>
+                  <option value="associate">Associate</option>
+                  <option value="mid_senior">Mid-Senior Level</option>
+                  <option value="director">Director</option>
+                  <option value="internship">Internship</option>
+                  <option value="executive">Executive</option>
+                </select>
+              </div>
+              <!-- Option selector -->
+              <div class="selector col-xl-3 col-lg-6 mt-3">
+                <select
+                  class="custom-select w-100 p-2 rounded"
+                  name="job-function"
+                >
+                  <option selected>Job Function</option>
+                  <option value="all">all</option>
+                  <option value="accounting_auditing">
+                    Accounting Auditing
+                  </option>
+                  <option value="administrative">Administrative</option>
+                  <option value="advertising">Advertising</option>
+                  <option value="analyst">Analyst</option>
+                  <option value="art_creative">Art Creative</option>
+                  <option value="business_development">
+                    Business Development
+                  </option>
+                  <option value="customer_service">Customer Service</option>
+                  <option value="design">Design</option>
+                  <option value="distribution">Distribution</option>
+                  <option value="education">Education</option>
+                  <option value="engineering">Engineering</option>
+                  <option value="finance">Finance</option>
+                  <option value="general_business">General Business</option>
+                  <option value="health_care_provider">
+                    Health Care Provider
+                  </option>
+                  <option value="human_resources">Human Resources</option>
+                  <option value="general_business">General Business</option>
+                  <option value="general_business">
+                    Information Technology
+                  </option>
+                  <option value="legal">Legal</option>
+                  <option value="management">Management</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="product_management">Product Management</option>
+                  <option value="production">Production</option>
+                  <option value="project_management">project_management</option>
+                  <option value="public_relations">public_relations</option>
+                  <option value="purchasing">Purchasing</option>
+                  <option value="quality_assurance">Quality Assurance</option>
+                  <option value="research">Research</option>
+                  <option value="sales">Sales</option>
+                  <option value="science">Science</option>
+                  <option value="supply_chain">Supply Chain</option>
+                  <option value="training">Training</option>
+                  <option value="writing_editing">Writing Editing</option>
+                  <option value="other">other...</option>
+                </select>
+              </div>
+              <!-- Option selector -->
+              <div class="selector col-xl-3 col-lg-6 mt-3">
+                <select
+                  class="custom-select w-100 p-2 rounded"
+                  name="type-of-employment"
+                >
+                  <option selected>Type of Employement</option>
+                  <option value="all">all</option>
+                  <option value="full_time">Full-Time</option>
+                  <option value="part_time">Part-Time</option>
+                  <option value="contract">Contract</option>
+                  <option value="internship">Internship</option>
+                </select>
+              </div>
+              <!-- Option selector -->
+              <div class="selector col-xl-3 col-lg-6 mt-3">
+                <select class="custom-select w-100 p-2 rounded" name="country">
+                  <option selected>Country</option>
+                  <option value="all_counties">All Countries</option>
+                  <option value="ar">Argentina</option>
+                  <option value="am">Armenia</option>
+                  <option value="by">Belarus</option>
+                  <option value="be">Belgium</option>
+                  <option value="ca">Canada</option>
+                  <option value="ci">Cote dIvoire</option>
+                  <option value="cy">Cyprus</option>
+                  <option value="eg">Egypt</option>
+                  <option value="fr">France</option>
+                  <option value="gr">Greece</option>
+                  <option value="gt">Guatemala</option>
+                  <option value="gn">Guinea</option>
+                  <option value="iq">Iraq</option>
+                  <option value="ke">Kenya</option>
+                  <option value="kw">Kuwait</option>
+                  <option value="lb">Lebanon</option>
+                  <option value="lr">Liberia</option>
+                  <option value="ng">Nigeria</option>
+                  <option value="om">Oman</option>
+                  <option value="qa">Qatar</option>
+                  <option value="sa">Saudi Arabia</option>
+                  <option value="sn">Senegal</option>
+                  <option value="si">Slovenia</option>
+                  <option value="za">South Africa</option>
+                  <option value="th">Thailand</option>
+                  <option value="tn">Tunisia</option>
+                  <option value="tr">Turkey</option>
+                  <option value="ae">United Arab Emirates</option>
+                  <option value="gb">United Kingdom</option>
+                  <option value="us">United States</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row gx-0 mt-3">
+              <div class="col-md-9 input d-flex align-items-center mt-3">
+                <input
+                  style="width: 30px; height: 30px"
+                  type="checkbox"
+                  aria-label="remote"
+                  name="remote"
+                />
+
+                <p class="text-light m-0 ms-2">Remote Jobs Only</p>
+              </div>
+              <button
+                type="submit"
+                class="p-3 col-md-3 btn bg-green text-light mt-3"
+              >
+                Apply Filters
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </header>
+
+    <!--****************Jobs****************-->
+    <section class="jobs bg-secondary pt-5 pb-4">
+      <div class="wrapper container">
+        <h2 class="nmbOfJobs text-light">
+          <strong>662</strong> jobs open in <strong>35 industries</strong>
+        </h2>
+        <!-- section job posts-->
+        <section class="jobPosts mt-5 pb-5 ">
+          <h2 class="jobTitle d-flex text-light mb-4 mt-5">
+            <strong>Newly Posted Jobs</strong> (64)
+            <a href="#" class="d-block ms-auto seeAllJobs">See All</a>
+          </h2>
+
+          <div class="jobPosts row g-4">
+         
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+          </div>
+        </section>
+
+        <!------------->
+        <!-- section Reviews -->
+        <section class="reviews p-5 mt-4 mb-4">
+          <div
+            id="carouselExampleInterval"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <!-- reviews -->
+            <div class="carousel-inner px-5" style="height: fit-content">
+              <!-- card -->
+              <div class="carousel-item active" data-bs-interval="8000">
+                <div
+                  class="card reviewCard mb-3 mx-auto px-2 pt-3 pb-3"
+                  style="max-width: 540px"
+                >
+                  <div class="row g-0">
+                    <div class="col-md-4 p-2 imageWrapper">
+                      <div class="userImage"></div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <p class="card-text">
+                          We filled our Research and Knowledge Coordinator role.
+                          They will be part of our global core team based in
+                          Beirut. We will make sure to return to Jobs for
+                          Lebanon again and will keep spreading the word in the
+                          meantime.
+                        </p>
+                        <h6 class="userName">
+                          Andrea Lang, Research and knowledge Coordinator
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-------------->
+              <!-- card -->
+              <div class="carousel-item" data-bs-interval="8000">
+                <div
+                  class="card reviewCard mb-3 mx-auto px-2 pt-3 pb-3"
+                  style="max-width: 540px"
+                >
+                  <div class="row g-0">
+                    <div class="col-md-4 p-2 imageWrapper">
+                      <div class="userImage"></div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <p class="card-text">
+                          We filled our Research and Knowledge Coordinator role.
+                          They will be part of our global core team based in
+                          Beirut. We will make sure to return to Jobs for
+                          Lebanon again and will keep spreading the word in the
+                          meantime.
+                        </p>
+                        <h6 class="userName">
+                          Andrea Lang, Research and knowledge Coordinator
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-------------->
+              <!-- card -->
+              <div class="carousel-item" data-bs-interval="8000">
+                <div
+                  class="card reviewCard mb-3 mx-auto px-2 pt-3 pb-3"
+                  style="max-width: 540px"
+                >
+                  <div class="row g-0">
+                    <div class="col-md-4 p-2 imageWrapper">
+                      <div class="userImage"></div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <p class="card-text">
+                          We filled our Research and Knowledge Coordinator role.
+                          They will be part of our global core team based in
+                          Beirut. We will make sure to return to Jobs for
+                          Lebanon again and will keep spreading the word in the
+                          meantime.
+                        </p>
+                        <h6 class="userName">
+                          Andrea Lang, Research and knowledge Coordinator
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-------------->
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+        <!------------->
+        <!-- section job posts-->
+        <section class="jobPosts mt-5 pb-5 pt-5">
+          <h2 class="jobTitle d-flex text-light mb-4 mt-5">
+            <strong>Newly Posted Jobs</strong> (64)
+            <a href="#" class="d-block ms-auto seeAllJobs">See All</a>
+          </h2>
+
+          <div class="jobPosts row g-4">
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+          </div>
+        </section>
+
+        <!-- section job posts-->
+        <section class="jobPosts mt-5 pb-5 pt-5">
+          <h2 class="jobTitle d-flex text-light mb-4 mt-5">
+            <strong>Newly Posted Jobs</strong> (64)
+            <a href="#" class="d-block ms-auto seeAllJobs">See All</a>
+          </h2>
+
+          <div class="jobPosts row g-4">
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+            <!-- Card -->
+            <div class="col-xl-4 col-lg-6">
+              <a class="job-link" href="#">
+                <div class="card px-2 pt-2 pb-5">
+                  <div class="card-body">
+                    <h1 class="card-title mb-4 postHeader">
+                      MARKETING
+                      <span class="bookmark-post rounded"
+                        ><img
+                          src="images/main/bookmarks.svg"
+                          alt="bookmark this post"
+                      /></span>
+                    </h1>
+                    <h1 class="mb-2 position">Hiring UI/UX DESIGNER</h1>
+
+                    <h6 class="card-subtitle mb-4 text-muted date">
+                      Beirut, Lebanon
+                    </h6>
+                    <h5 class="card-subtitle mt-2 text-muted requireing">
+                      Full-time <span class="circle"></span> Mid Senior Level
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!------------------------------>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!--****************subscribe****************-->
+    <section class="subscribe pt-5 pb-5 ">
+      <div class="sectionWrapper container pt-2 pb-2">
+        <div class="row gy-4">
+          <div class="col-xl-5 col-lg-6">
+            <h1>Can't find the right fit?</h1>
+            <p>
+              Let us promptly keep you updated on new job offerings so you can
+              stay ahead of the curve!
+            </p>
+          </div>
+          <div class="col-xl-7 col-lg-6">
+            <div class="row gx-0 gy-3">
+              <div class="btn col-xl-6 col-lg-12">
+                <button class="w-100 p-3 btn bg-green text-light">
+                  Email me Filtered Jobs
+                </button>
+              </div>
+              <div class="btn col-xl-6 col-lg-12">
+                <button class="w-100 p-3 btn bg-green text-light">
+                  Email me all jobs
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--****************Donate****************-->
+    <section class="donate bg-light pt-5 pb-5">
+      <div class="row container mx-auto px-0 pt-5 pb-5">
+        <div class="textWrapper col-xl-6 pt-5 mb-5">
+          <h1>
+            Let's create an alternate economy to revive the lebanon we know and
+            love.
+          </h1>
+          <p class="mt-4">
+            Lebanon is facing an existential economic crisis, people's money are
+            stuck in banks. Our currency lost nearly all its value, Businesses
+            are closing at a frightening pace. Jobs have vanished.
+          </p>
+          <p class="mt-4">
+            Now is our time to get involved. Post a job, make a hire, and
+            <span class="g">donate</span> to our cause!
+          </p>
+        </div>
+        <div class="video col-xl-6 mb-5 ">
+          <iframe
+          class="mx-auto d-block"
+          style="min-height:400px;
+          max-width:700px"
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/A_vXjVYLkXc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="row">
+          <div class="col-xl-3">
+            <button class="w-100 mt-4 donateBtn p-4 btn bg-green text-light" style="max-width:500px"  >
+            Donate
+            </button>
+          </div>
+        </div>
+       
+        </div>
+      </div>
+    </section>
+
+
+    <!--****************How it Works****************-->
+    <section class="howItWorks pt-5 pb-5 container">
+      <div class="row pt-5">
+        <div class="text text-light col-xl-5 mt-5">
+          <h1>Hire talented Lebanese teams or candidates</h1>
+        <ol class="list-group list-group-numbered mt-4">
+          <li>Enter your Email</li>
+          <li>Post your job </li>
+          <li >That’s it!</li>
+        </ol>
+         <button class="w-100 p-4 btn bg-green text-light mt-5" >
+                  Post a Job
+                </button>
+        </div>
+        <div class="image col-xl-7">
+          <img class="w-100" src="images/howItWorks/howItWorks.svg" alt="meet up">
+        </div>
+      </div>
+    </section>
+
+     <!--****************Footer****************-->
+
+     <footer class="pt-5 pb-1">
+       <div class="socialMedia d-flex justify-content-center gap-3">
+         <div class="sm">
+           <img src="images/socialMediaIcons/facebookLogo.svg" alt="Facebook Logo">
+         </div>
+              <div class="sm">
+           <img src="images/socialMediaIcons/linkedInLogo.svg" alt="Facebook Logo">
+         </div>
+              <div class="sm">
+           <img src="images/socialMediaIcons/youtubeLogo.svg" alt="Facebook Logo">
+         </div>
+              <div class="sm">
+           <img src="images/socialMediaIcons/instagramIcon.svg" alt="Facebook Logo">
+         </div>
+
+       </div>
+       <!-- <a href="#" class="BackToTop">a</a> -->
+      <div class="text mt-5">
+        <p class="m-0">Jobs in Lebanon is a dummy clone of Jobs for Lebanon</p>
+        <p>Created by <a href="">Abdullah Bou Nassif</a></p>
+      </div>
+     </footer>
+     
+    <!-- BOOTSTRAP SCRIPT -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Javascript Scripts -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/jobsManagement.js"></script>
+  </body>
+</html>
